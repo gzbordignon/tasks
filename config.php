@@ -2,10 +2,12 @@
 
 return [
 	'database' => [
-		'dbname' => 'contaagil',
-		'username' => 'root',
-		'password' => '26628426',
-		'connection' => 'mysql:host=127.0.0.1',
+		'driver' => $_ENV['DB_DRIVER'],
+		'host' => $_ENV['DB_HOST'],
+		'port' => $_ENV['DB_PORT'],
+		'dbname' => $_ENV['DB_NAME'],
+		'username' => $_ENV['DB_USERNAME'],
+		'password' => $_ENV['DB_PASSWORD'],
 		'options' => [
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 		]

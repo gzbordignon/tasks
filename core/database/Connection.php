@@ -7,7 +7,7 @@ class Connection
 	{
 	    try {
 			return new PDO(
-				$config['connection'].';dbname='.$config['dbname'], $config['username'], $config['password'], $config['options']
+				$config['driver'].':host='.$config['host'].';port='.$config['port'].';dbname='.$config['dbname'], $config['username'], $config['password'], $config['options']
 			);
 		} catch (PDOException $e) {
 			// $e->getMessage();
